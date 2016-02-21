@@ -41,8 +41,5 @@ dependencies {
     compile files('libs/activation.jar')
     compile files('libs/additionnal.jar')
     compile files('libs/javax.mail.jar')
-    compile files('/home/yogeshwardancharan/TrystMakerThon/NavigatorAndroidStudio/libs/activation.jar')
-    compile files('/home/yogeshwardancharan/TrystMakerThon/NavigatorAndroidStudio/libs/additionnal.jar')
-    compile files('/home/yogeshwardancharan/TrystMakerThon/NavigatorAndroidStudio/libs/javax.mail.jar')
-    compile 'com.google.android.gms:play-services-gcm:7.5.0'
+    compile 'com.google.android.gms:play-services-gcm:7.8.0'
 }

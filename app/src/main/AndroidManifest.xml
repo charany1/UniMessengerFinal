@@ -43,7 +43,7 @@
         </activity>
         <activity
             android:name=".gmailActivity"
-            android:label="@string/title_activity_contacts"
+            android:label="Google Mail"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
