@@ -13,6 +13,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AbsListView;
@@ -74,6 +75,10 @@ public class gmailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gmail);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mListView = (SwipeMenuListView)findViewById(R.id.listView);
         mFloatingActionButton = (FloatingActionButton)findViewById(R.id.fab);
@@ -309,7 +314,6 @@ public class gmailActivity extends AppCompatActivity {
 
                 if (_m.getPayload().getBody() != null && _m.getPayload().getBody().decodeData() != null) {
                     _body = new String(_m.getPayload().getBody().decodeData());
-                    Log.e("Body", "+1");
                 }
                 for (MessagePartHeader _header : _m.getPayload().getHeaders())
                 {
