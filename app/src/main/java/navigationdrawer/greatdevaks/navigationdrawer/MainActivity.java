@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+            startActivity(new Intent(MainActivity.this,SMS.class));
 
         }else if (id == R.id.nav_contacts){
             startActivity(new Intent(MainActivity.this,Contacts.class));
