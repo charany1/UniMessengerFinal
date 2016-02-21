@@ -84,11 +84,16 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_messages) {
             // Handle the camera action
+
+            /*
             MessagesFragment fragment = new MessagesFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, fragment);
             fragmentTransaction.commit();
+            */
+
+            startActivity(new Intent(MainActivity.this,gmailActivity.class));
         } else if (id == R.id.nav_profile) {
             ProfileFragment fragment = new ProfileFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =

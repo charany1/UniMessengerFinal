@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="navigationdrawer.greatdevaks.navigationdrawer">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,6 +33,36 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="navigationdrawer.greatdevaks.navigationdrawer.MainActivity" />
         </activity>
+
+        <activity
+            android:name=".gmailActivity"
+            android:label="@string/title_activity_contacts"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="navigationdrawer.greatdevaks.navigationdrawer.MainActivity" />
+        </activity>
+
+        <activity android:name=".gmailReadActivity"
+            android:label="Mail Inbox"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="navigationdrawer.greatdevaks.navigationdrawer.gmailActivity" />
+
+        </activity>
+        <activity android:name=".gmailComposeActivity"
+            android:label="Compose Mail"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="navigationdrawer.greatdevaks.navigationdrawer.gmailActivity" />
+            </activity>
+
+
     </application>
 
 </manifest>
